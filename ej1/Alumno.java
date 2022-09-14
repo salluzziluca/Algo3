@@ -6,7 +6,7 @@ public class Alumno {
 	private final int padron;
 	private ArrayList<Carrera> carrerasActivas;
 	private ArrayList<Materia> materiasAprobadas;
-	
+
 	public Alumno(int padron) {
 		this.padron = padron;
 		this.carrerasActivas = new ArrayList<Carrera>();
@@ -16,7 +16,7 @@ public class Alumno {
 	public boolean inscribir(Carrera carrera) {
 		if (carrerasActivas.contains(carrera)) {
 			return false;
-		}		
+		}
 		carrerasActivas.add(carrera);
 		return true;
 	}
@@ -25,12 +25,13 @@ public class Alumno {
 		if (materiasAprobadas.contains(materia)) {
 			return false;
 		}
-		materiasAprobadas.add(materia);				
+		materiasAprobadas.add(materia);
 		return true;
 	}
 
 	public String getEstadoCarrera(Carrera info) {
 		int creditos = 0;
+		System.out.println("Su padrón es: " + padron);
 		for (int i = 0; i < materiasAprobadas.size(); i++) {
 			creditos += materiasAprobadas.get(i).getCreditos();
 		}
