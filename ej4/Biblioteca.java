@@ -7,7 +7,7 @@ public class Biblioteca {
         this.libros = libros;
     }
 
-    public Libro getLibro(int codigo) {
+    public Libro getLibro(Long codigo) {
         Libro libro_pedido = null;
         for (int i = 0; i < libros.length; i++) {
             if (libros[i].getCodigo() == codigo) {
@@ -15,5 +15,14 @@ public class Biblioteca {
             }
         }
         return libro_pedido;
+    }
+
+    public void printLibros() {
+        for (int i = 0; i < libros.length; i++) {
+            System.out.println(i);
+            System.out.println(libros[i].getTitulo());
+            System.out.println(libros[i].getCodigo());
+            System.out.println("--------------------");
+        }
     }
 }

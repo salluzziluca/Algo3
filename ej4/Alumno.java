@@ -16,7 +16,8 @@ public class Alumno {
         if (libro_pedido != null) {
             librosPedidos.add(libro_pedido);
             System.out.println("El libro " + libro_pedido.getTitulo() + " ha sido pedido");
+        } else {
+            System.out.println("El libro " + Libro.getTitulo() + " no se encuentra en la biblioteca");
         }
-        System.out.println("El libro " + Libro.getTitulo() + " no se encuentra en la biblioteca");
     }
 }
