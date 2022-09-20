@@ -15,4 +15,7 @@ public abstract class Mensaje {
         this.receptor = receptor;
     }
 
+    public void MostrarMensaje() {
+    }
+
 }
