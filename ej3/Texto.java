@@ -9,7 +9,7 @@ public class Texto extends Mensaje {
 
     public void MostrarMensaje() {
         System.out.println("Mensaje de " + emisor.nombre + " a " + receptor.nombre + " el " + fecha.getTime());
-        System.out.println(texto);
+        System.out.println("Mensaje: " + texto);
     }
 
 }
