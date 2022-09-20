@@ -1,7 +1,6 @@
 package ej3;
 
 import java.util.HashMap;
-import java.util.Calendar;
 
 public class Cartelera {
     // un hash map de Usuarios
