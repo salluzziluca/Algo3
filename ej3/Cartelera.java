@@ -8,8 +8,12 @@ public class Cartelera {
     private String usuarioLogeado;
 
     public Cartelera() {
-        usuarios = new HashMap<String, Usuario>();
-        usuarioLogeado = null;
+        this.usuarios = new HashMap<String, Usuario>();
+        this.usuarioLogeado = null;
+    }
+
+    public void registrarUsuario(String nombre, Usuario usuario) {
+        this.usuarios.put(nombre, usuario);
     }
 
     public boolean login(String nombre, String contraseña) {

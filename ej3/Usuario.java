@@ -13,6 +13,13 @@ public class Usuario {
         this.muro = muro;
     }
 
+    public String getNombre() {
+        if (nombre == null) {
+            return "";
+        }
+        return nombre;
+    }
+
     public boolean RecibirMensaje(Mensaje mensaje) {
         return muro.add(mensaje);
     }
