@@ -2,7 +2,7 @@ package ej3;
 
 import java.util.*;
 
-public class Mensaje {
+public abstract class Mensaje {
     String texto;
     Calendar fecha;
     Usuario emisor;
@@ -14,4 +14,5 @@ public class Mensaje {
         this.emisor = emisor;
         this.receptor = receptor;
     }
+
 }
