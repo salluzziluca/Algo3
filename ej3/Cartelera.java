@@ -1,6 +1,7 @@
 package ej3;
 
 import java.util.HashMap;
+import java.util.Calendar;
 
 public class Cartelera {
     // un hash map de Usuarios
@@ -8,12 +9,12 @@ public class Cartelera {
     private String usuarioLogeado;
 
     public Cartelera() {
-        this.usuarios = new HashMap<String, Usuario>();
-        this.usuarioLogeado = null;
+        usuarios = new HashMap<String, Usuario>();
+        usuarioLogeado = null;
     }
 
     public void registrarUsuario(String nombre, Usuario usuario) {
-        this.usuarios.put(nombre, usuario);
+        usuarios.put(nombre, usuario);
     }
 
     public boolean login(String nombre, String contraseña) {
@@ -23,6 +24,16 @@ public class Cartelera {
                 usuarioLogeado = nombre;
                 return true;
             }
+        }
+        return false;
+    }
+
+    public boolean pasarMensaje(String receptor, Mensaje mensaje) {
+        if (usuarios.containsKey(receptor)) {
+            Usuario usuario = usuarios.get(receptor);
+
+            usuario.RecibirMensaje(mensaje);
+            return true;
         }
         return false;
     }
