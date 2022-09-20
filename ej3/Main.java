@@ -14,7 +14,14 @@ public class Main {
         if (login) {
             System.out.println("Login correcto");
             Mensaje mensaje = new Texto("Hola", Calendar.getInstance(), usuario1, usuario2);
+            Mensaje mensaje2 = new Link("https://www.google.com", Calendar.getInstance(), usuario1, usuario2);
+            Mensaje mensaje3 = new Video("https://www.youtube.com/watch?v=QH2-TGUlwu4", Calendar.getInstance(),
+                    usuario1, usuario2);
+            Mensaje mensaje4 = new Imagen("https://www.google.com", Calendar.getInstance(), usuario1, usuario2);
             usuario1.EnviarMensaje(mensaje, cartelera, "Pablo");
+            usuario1.EnviarMensaje(mensaje2, cartelera, "Pablo");
+            usuario1.EnviarMensaje(mensaje3, cartelera, "Pablo");
+            usuario1.EnviarMensaje(mensaje4, cartelera, "Pablo");
             cartelera.logout();
             login = cartelera.login("Pablo", "1234");
             if (login) {
