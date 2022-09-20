@@ -1,13 +1,24 @@
 package ej3;
 
+import java.util.ArrayList;
+
 public class Usuario {
     String nombre;
     String contraseña;
-    Mensaje[] mensajes;
+    ArrayList<Mensaje> muro;
 
-    public Usuario(String nombre, String contraseña, Mensaje[] mensajes) {
+    public Usuario(String nombre, String contraseña, ArrayList<Mensaje> muro) {
         this.nombre = nombre;
         this.contraseña = contraseña;
-        this.mensajes = mensajes;
+        this.muro = muro;
     }
+
+    public boolean RecibirMensaje(Mensaje mensaje) {
+        return muro.add(mensaje);
+    }
+
+    public boolean AutenticarPassword(String contraseña) {
+        return this.contraseña.equals(contraseña);
+    }
+
 }
