@@ -16,6 +16,10 @@ public class Cartelera {
         usuarios.put(nombre, usuario);
     }
 
+    public boolean existeUsuario(String nombre) {
+        return usuarios.containsKey(nombre);
+    }
+
     public boolean login(String nombre, String contraseña) {
         if (usuarios.containsKey(nombre)) {
             Usuario usuario = usuarios.get(nombre);

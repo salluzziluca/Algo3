@@ -6,10 +6,10 @@ import java.util.Calendar;
 public class Main {
     public static void main(String[] args) {
         Cartelera cartelera = new Cartelera();
-        Usuario usuario1 = new Usuario("Luca", "1234", new ArrayList<Mensaje>());
-        Usuario usuario2 = new Usuario("Pablo", "1234", new ArrayList<Mensaje>());
-        cartelera.registrarUsuario(usuario1.getNombre(), usuario1);
-        cartelera.registrarUsuario(usuario2.getNombre(), usuario2);
+        Personal personal = new Personal("admin", "admin", new ArrayList<Mensaje>(), "admin");
+        Usuario usuario1 = personal.crear_usuario(cartelera, "Luca", "1234");
+        Usuario usuario2 = personal.crear_usuario(cartelera, "Pablo", "1234");
+
         boolean login = cartelera.login("Luca", "1234");
         if (login) {
             System.out.println("Login correcto");
