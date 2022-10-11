@@ -4,11 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Alumno {
-    private final int padrón;
     private List<Libro> librosPedidos = new ArrayList<Libro>();
 
     public Alumno(int padrón) {
-        this.padrón = padrón;
     }
 
     public void PedirLibro(Biblioteca Biblioteca, Libro Libro) {
