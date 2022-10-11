@@ -1,7 +1,6 @@
 package ej1;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Alumno {
 	private final int padron;
